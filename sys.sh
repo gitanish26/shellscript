@@ -1,0 +1,17 @@
+#!/bin/bash
+read -p "what do you want to check anish? 1.system uptime 2.number of users logged in 3.CPU utilization" SYS_INFO
+case "$SYS_INFO" in 
+	1)
+		echo"the system uptime is $(uptime)"
+	;;
+2)
+	echo "currently $(w)"
+        ;;
+3)
+	echo "the cpu utilization is $(sar 2 5)"
+        ;;
+*)
+	echo "please select the correct option"
+        ;;
+esac
+
